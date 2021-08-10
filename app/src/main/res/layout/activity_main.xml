@@ -29,8 +29,10 @@
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:contentDescription="Search"
+        android:tint="@android:color/white"
         app:srcCompat="@android:drawable/ic_menu_search"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:contentDescription="Search" />
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
