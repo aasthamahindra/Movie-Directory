@@ -72,18 +72,17 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        movieList = new ArrayList<>();
+
         Prefs prefs = new Prefs(MainActivity.this);
         String search = prefs.getSearch();
-
-        movieList = new ArrayList<>();
-        getMovies(search);
+        //getMovies(search);
+        movieList = getMovies(search);
 
         movieRecyclerViewAdapter = new MovieRecyclerViewAdapter(this, movieList);
         recyclerView.setAdapter(movieRecyclerViewAdapter);
         movieRecyclerViewAdapter.notifyDataSetChanged();
     }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -127,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
                         movie.setPoster(movieObj.getString("Poster"));
                         movie.setImdbId(movieObj.getString("imdbID"));
 
-                        Log.d("Movies: ", movie.getTitle());
+                        //Log.d("Movies: ", movie.getTitle());
 
                         movieList.add(movie);
                     }

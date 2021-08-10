@@ -6,8 +6,10 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp">
 
         <RelativeLayout
             android:padding="12dp"
@@ -22,32 +24,35 @@
 
             <TextView
                 android:id="@+id/movieTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@id/movieImageID"
                 android:paddingLeft="15dp"
                 android:text="Movie Title"
-                android:textStyle="bold"
-                android:layout_toRightOf="@id/movieImageID"
-                android:layout_centerHorizontal="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/movieRelease"
-                android:paddingLeft="15dp"
-                android:layout_toRightOf="@id/movieImageID"
-                android:layout_below="@id/movieTitle"
-                android:text="Released:"
-                android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_below="@id/movieTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@id/movieImageID"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:text="Released:" />
 
             <TextView
                 android:id="@+id/movieCat"
-                android:paddingLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/movieRelease"
                 android:layout_toRightOf="@id/movieImageID"
-                android:text="Category"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:text="Category" />
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
